@@ -1,0 +1,142 @@
+<!-- <!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>維基百科連結挑戰</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 font-inter min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-2xl border border-gray-200">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">維基百科連結挑戰</h1>
+
+        <div id="game-setup" class="space-y-4 mb-6">
+            <div class="flex flex-col">
+                <label for="start-term" class="text-gray-700 font-medium mb-1">起點詞彙：</label>
+                <input type="text" id="start-term" placeholder="例如：花椰菜" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+            </div>
+            <div class="flex flex-col">
+                <label for="end-term" class="text-gray-700 font-medium mb-1">終點詞彙：</label>
+                <input type="text" id="end-term" placeholder="例如：ChatGPT" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+            </div>
+            <button id="start-game-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                <i class="fas fa-play mr-2"></i> 開始遊戲
+            </button>
+        </div>
+
+        <div id="game-play" class="hidden space-y-4">
+            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                <p class="text-blue-800 font-semibold mb-2">目前頁面：<span id="current-page" class="font-bold text-blue-900"></span></p>
+                <p class="text-blue-800 font-semibold">目標頁面：<span id="target-page" class="font-bold text-blue-900"></span></p>
+            </div>
+
+            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <p class="text-gray-700 font-semibold mb-2">已花費時間：<span id="time-elapsed" class="font-bold text-gray-900">00:00</span></p>
+                <p class="text-gray-700 font-semibold">路徑：<span id="path-display" class="font-bold text-gray-900"></span></p>
+            </div>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-6 mb-4">請選擇一個連結前往：</h2>
+            <div id="links-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                </div>
+
+            <button id="reset-game-btn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 mt-6">
+                <i class="fas fa-redo mr-2"></i> 重設遊戲
+            </button>
+        </div>
+
+        <div id="game-results" class="hidden space-y-4 text-center">
+            <h2 class="text-2xl font-bold text-green-700 mb-4">恭喜您！抵達終點！</h2>
+            <p class="text-lg text-gray-800">最終路徑：<span id="final-path" class="font-bold text-gray-900"></span></p>
+            <p class="text-lg text-gray-800">總花費時間：<span id="final-time" class="font-bold text-gray-900"></span></p>
+            <button id="play-again-btn" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 mt-6">
+                <i class="fas fa-gamepad mr-2"></i> 再玩一次
+            </button>
+        </div>
+
+        <div id="message-box" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden z-50">
+            <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full text-center">
+                <p id="message-content" class="text-gray-800 text-lg mb-4"></p>
+                <button id="message-box-ok" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-200">
+                    確定
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>維基百科連結挑戰</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 font-inter min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-2xl border border-gray-200">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">維基百科連結挑戰</h1>
+
+        <div id="game-setup" class="space-y-4 mb-6">
+            <div class="flex flex-col">
+                <label for="start-term" class="text-gray-700 font-medium mb-1">起點詞彙：</label>
+                <input type="text" id="start-term" placeholder="例如：花椰菜" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+            </div>
+            <div class="flex flex-col">
+                <label for="end-term" class="text-gray-700 font-medium mb-1">終點詞彙：</label>
+                <input type="text" id="end-term" placeholder="例如：ChatGPT" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+            </div>
+            <button id="start-game-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                <i class="fas fa-play mr-2"></i> 開始遊戲
+            </button>
+        </div>
+
+        <div id="game-play" class="hidden space-y-4">
+            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                <p class="text-blue-800 font-semibold mb-2">目前頁面：<span id="current-page" class="font-bold text-blue-900"></span></p>
+                <p class="text-blue-800 font-semibold">目標頁面：<span id="target-page" class="font-bold text-blue-900"></span></p>
+            </div>
+
+            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <p class="text-gray-700 font-semibold mb-2">已花費時間：<span id="time-elapsed" class="font-bold text-gray-900">00:00</span></p>
+                <p class="text-gray-700 font-semibold">路徑：<span id="path-display" class="font-bold text-gray-900"></span></p>
+            </div>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-6 mb-4">維基百科頁面內容：</h2>
+            <div id="wiki-content-display" class="bg-white p-4 rounded-lg border border-gray-200 overflow-y-auto max-h-96 mb-4">
+                <p class="text-gray-600 text-center">載入中...</p>
+            </div>
+            <button id="reset-game-btn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 mt-6">
+                <i class="fas fa-redo mr-2"></i> 重設遊戲
+            </button>
+        </div>
+
+        <div id="game-results" class="hidden space-y-4 text-center">
+            <h2 class="text-2xl font-bold text-green-700 mb-4">恭喜您！抵達終點！</h2>
+            <p class="text-lg text-gray-800">最終路徑：<span id="final-path" class="font-bold text-gray-900"></span></p>
+            <p class="text-lg text-gray-800">總花費時間：<span id="final-time" class="font-bold text-gray-900"></span></p>
+            <button id="play-again-btn" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 mt-6">
+                <i class="fas fa-gamepad mr-2"></i> 再玩一次
+            </button>
+        </div>
+
+        <div id="message-box" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden z-50">
+            <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full text-center">
+                <p id="message-content" class="text-gray-800 text-lg mb-4"></p>
+                <button id="message-box-ok" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-200">
+                    確定
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+/* Custom styles (if any) or overrides for Tailwind */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+input:focus, button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* blue-500 with opacity */
+}
+
+#message-box {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+button {
+    transition: all 0.2s ease-in-out;
+}
+
+/* --- 新增：維基百科內容中連結的樣式 --- */
+#wiki-content-display a.wiki-link {
+    color: #3b82f6; /* Tailwind blue-500 */
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+#wiki-content-display a.wiki-link:hover {
+    color: #2563eb; /* Tailwind blue-600 */
+}
+
+/* 確保圖片在內容區塊內不會溢出 */
+#wiki-content-display img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* 避免圖片下方有額外空間 */
+    margin: 0 auto; /* 居中圖片 */
+    border-radius: 0.5rem; /* 圓角 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 輕微陰影 */
+}
+
+/* 調整內容區塊內的一些基本排版，使其更易讀 */
+#wiki-content-display p {
+    margin-bottom: 0.75em;
+    line-height: 1.6;
+}
+
+#wiki-content-display h1,
+#wiki-content-display h2,
+#wiki-content-display h3,
+#wiki-content-display h4,
+#wiki-content-display h5,
+#wiki-content-display h6 {
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+#wiki-content-display h1 { font-size: 2em; }
+#wiki-content-display h2 { font-size: 1.75em; }
+#wiki-content-display h3 { font-size: 1.5em; }
+#wiki-content-display h4 { font-size: 1.25em; }
+#wiki-content-display h5 { font-size: 1.1em; }
+#wiki-content-display h6 { font-size: 1em; }
+
+#wiki-content-display ul,
+#wiki-content-display ol {
+    margin-left: 1.5em;
+    margin-bottom: 0.75em;
+}
+#wiki-content-display li {
+    margin-bottom: 0.25em;
+}
+
+#wiki-content-display table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+#wiki-content-display th,
+#wiki-content-display td {
+    border: 1px solid #e2e8f0; /* Tailwind gray-200 */
+    padding: 0.5em;
+    text-align: left;
+}
+#wiki-content-display th {
+    background-color: #f8fafc; /* Tailwind gray-50 */
+    font-weight: bold;
+}
