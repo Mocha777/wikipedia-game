@@ -273,7 +273,7 @@ let targetPage = '';
 let currentAvailableGameLinks = []; // 儲存當前頁面有效的遊戲連結
 
 // 後端 API 的基礎 URL
-const BACKEND_API_BASE_URL = 'https://20b8-114-36-35-76.ngrok-free.app';
+const BACKEND_API_BASE_URL = 'https://e394-114-36-29-205.ngrok-free.app';
 
 // 顯示訊息框
 function showMessage(message) {
